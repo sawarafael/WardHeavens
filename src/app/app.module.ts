@@ -11,6 +11,9 @@ import { FiltrosComponent } from './pages/collaborators/filtros/filtros.componen
 import { NewCollaboratorsComponent } from './pages/collaborators/new-collaborators/new-collaborators.component';
 import { EditCollaboratorComponent } from './pages/collaborators/edit-collaborator/edit-collaborator.component';
 import { ProfileComponent } from './pages/collaborators/profile/profile.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,13 @@ import { ProfileComponent } from './pages/collaborators/profile/profile.componen
     FiltrosComponent,
     NewCollaboratorsComponent,
     EditCollaboratorComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
