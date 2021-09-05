@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  credenciais = {
+    email:    'admin',
+    password: 'admin'
+  }
+
+  email: any = '';
+  password: any = '';
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  async onSubmit() {
+      if (this.credenciais.email == this.email
+         && this.credenciais.password == this.password) {
+           this.router.navigateByUrl('list')
+           console.log(`Login efetuado`);
+         } else {
+
+           console.log('erro na senha')
+         }
   }
 
 }

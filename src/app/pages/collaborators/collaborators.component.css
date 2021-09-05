@@ -1,0 +1,19 @@
+
+.box {
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 1rem;
+    background-color: #dcd8c0;
+    padding-top: 5%;
+    padding: .5rem;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: stretch;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 20%;
+}

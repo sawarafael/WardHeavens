@@ -1,1 +1,58 @@
-<p>collaborators works!</p>
+
+<div class="mt-5 mx-4 shadow-lg box rounded">
+    <app-filtros></app-filtros>
+</div>
+
+<div class="my-5 mx-4 shadow-lg box rounded">
+    <h3 class="border-bottom border-dark">
+        Scions of First Dawn
+    </h3>
+
+    <figure>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" *ngFor="let displayedColumn of displayedColumns">
+                        {{ displayedColumn }}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of dataSource" class="mx-5 my-5 border-bottom border-dark">
+                    <td>
+                        <img [src]="data.Avatar" class="avatar">
+                    </td>
+                    <td class="mt-2">
+                        <h4 class="mt-4">
+                            <strong>
+                                {{ data.Name }}
+                            </strong>
+                        </h4>
+                    </td>
+                    <td>
+                        <h6 class="mt-4">
+                            {{ data.Age }} Anos
+                        </h6>
+                    </td>
+                    <td>
+                        <h6 class="mt-4">
+                            {{ data.Role }}
+                        </h6>
+                    </td>
+                    <td>
+                        <h6 class="mt-4">
+                            {{ data.Job }}
+                        </h6>
+                    </td>
+                    <td>
+                        <h6 class="mt-4">
+                            Level {{ data.LVL }}
+                        </h6>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </figure>
+    </div>
+<br>
