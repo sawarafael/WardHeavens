@@ -1,17 +1,38 @@
-<div class="mt-5 my-5 box shadow-lg bg-white">
-  <div class="box-header">
-    <div class="title-wrapper">
-      <h3>
-        Login
-      </h3>
-    </div>
-    <div class="input-wrapper">
-      <form class="example-form">
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="Ex. Pizza">
-        </mat-form-field>
+<div class="box body">
+  <figure>
+    <figcaption>
+      Login
+    </figcaption>
+    <div>
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <fieldset>
+          <legend>
+            Insira os Dados para a Autenticação.
+          </legend>
+          <p>
+            <label for="text">
+              Email
+            </label>
+          </p>
+          <input class="full" type="email" id="email" name="email" placeholder="Insira seu Email" [(ngModel)]="email" required>
+          <br /> <br>
+          <p>
+            Senha
+          </p>
+          <input class="full" type="password" id="password" name="password" placeholder="Insira sua Senha" [(ngModel)]="password" required>
+          <button class="full" type="submit" >
+            Acessar
+          </button>
+          <br><br>
+          <p>
+            <em>
+              <a href="signup">
+                Criar uma nova conta
+              </a>
+            </em>
+          </p>
+        </fieldset>
       </form>
     </div>
-  </div>
+  </figure>
 </div>
